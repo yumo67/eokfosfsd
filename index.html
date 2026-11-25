@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#121012">
+<title>夜光カルテ — Yakō Karte</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%23ebe5dc'/%3E%3Crect x='3' y='1' width='2' height='6' fill='%23b3283a'/%3E%3Crect x='1' y='3' width='6' height='2' fill='%23b3283a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=IBM+Plex+Mono:wght@500;700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/night-shift.css">
+</head>
+<body>
+<div id="app">
+  <div id="stage">
+    <canvas id="scene" width="480" height="270" aria-label="clinic"></canvas>
+    <div id="labels"></div>
+    <div id="hud" class="hidden"></div>
+    <div id="ui"></div>
+    <div id="dialog" class="hidden"></div>
+    <div id="mg" class="layer hidden"></div>
+    <div id="tg" class="layer hidden"></div>
+    <div id="doorv" class="layer hidden"></div>
+    <div id="title" class="layer hidden"></div>
+    <div id="itemget" class="layer hidden"></div>
+    <div id="toasts"></div>
+    <div id="savechip" class="hidden"></div>
+    <div id="fade"></div>
+    <div id="boot" class="layer"></div>
+    <div id="scan"></div>
+  </div>
+  <div id="rotate">
+    <div class="rotation-file">
+      <div class="rot-kicker"><i></i> YAKŌ KARTE / 03:33</div>
+      <svg class="rot-drawing" viewBox="0 0 144 96" shape-rendering="crispEdges" aria-hidden="true">
+        <path fill="#d8d4d1" d="M8 13h128v69H8z"/><path fill="#bdb8b8" d="M8 26h128v1H8zm0 41h128v1H8zM38 13h1v69h-1zm67 0h1v69h-1z"/>
+        <path fill="#6e676a" d="M20 25h21v43H20zm2 2h17v39H22z" fill-rule="evenodd"/>
+        <path fill="#b3283a" d="M48 43h5v-4h7v-4h12v4h-9v4h-7v4h-8zm20-15h12v14h-4V32h-8z"/>
+        <g class="rot-pixels"><path fill="#121012" d="M67 44h55v29H67z"/><path fill="#4a4447" d="M69 45h51v26H69z"/><path fill="#f4efe7" d="M75 48h40v20H75z"/><path fill="#d8d4d1" d="M75 62h40v6H75z"/><path fill="#b3283a" d="M93 52h4v12h-4zm-4 4h12v4H89z"/><path fill="#ecb3b2" d="M70 56h3v4h-3zm47 0h1v4h-1z"/></g>
+        <path fill="#8a1d2c" d="M14 13h7v2h-7zm107 0h7v2h-7zM14 80h7v2h-7zm107 0h7v2h-7z"/>
+      </svg>
+      <h1 class="rot-ja" lang="ja">画面を横向きに</h1>
+      <h1 class="rot-en" lang="en">TURN TO LANDSCAPE</h1>
+      <h1 class="rot-ru" lang="ru">ПОВЕРНИТЕ ЭКРАН</h1>
+      <p class="rot-ja" lang="ja">夜勤は横向き画面で始まります。</p>
+      <p class="rot-en" lang="en">THE NIGHT SHIFT PLAYS IN LANDSCAPE.</p>
+      <p class="rot-ru" lang="ru">НОЧНАЯ СМЕНА ИДЁТ В ГОРИЗОНТАЛЬНОМ РЕЖИМЕ.</p>
+      <div class="rot-languages"><button type="button" data-rot-lang="ja">日本語</button><button type="button" data-rot-lang="en">EN</button><button type="button" data-rot-lang="ru">RU</button></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
